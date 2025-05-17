@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Reels Bundle - Digital Content Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ===== BASE STYLES ===== */
+    :root {
+      --primary: #6c5ce7;
+      --primary-dark: #5649d1;
+      --secondary: #a29bfe;
+      --dark: #2d3436;
+      --light: #f5f6fa;
+      --accent: #fd79a8;
+      --success: #00b894;
+      --gold: #ffd700;
+      --silver: #c0c0c0;
+      --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', system-ui, sans-serif;
+    }
+    
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* ===== HEADER ===== */
+    .main-header {
+      text-align: center;
+      padding: 40px 0;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .main-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      transform: rotate(30deg);
+      animation: shine 8s infinite linear;
+    }
+    
+    @keyframes shine {
+      0% { transform: rotate(30deg) translate(-10%, -10%); }
+      100% { transform: rotate(30deg) translate(10%, 10%); }
+    }
+    
+    .main-header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      font-weight: 800;
+      font-family: 'Montserrat', sans-serif;
+      position: relative;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .main-header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    /* ===== REELS SHOWCASE ===== */
+    .reels-showcase {
+      margin-bottom: 60px;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--dark);
+      display: inline-block;
+      padding-bottom: 15px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .section-title h2:after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 4px;
+      background: var(--primary);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    
+    .reels-marquee {
+      display: flex;
+      overflow: hidden;
+      gap: 30px;
+      padding: 20px 0;
+      margin-bottom: 40px;
+    }
+    
+    .marquee-track {
+      display: flex;
+      gap: 30px;
+      animation: scroll 30s linear infinite;
+    }
+    
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-50% - 15px)); }
+    }
+    
+    .reel-highlight {
+      min-width: 250px;
+      height: 350px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      position: relative;
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+    
+    .reel-highlight:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .reel-highlight img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .reel-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      padding: 20px;
+      color: white;
+    }
+    
+    .reel-overlay h3 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    
+    .reel-overlay .price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    
+    /* ===== REELS BUNDLES ===== */
+    .bundles-section {
+      margin-bottom: 60px;
+    }
+    
+    .bundles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    
+    .bundle-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      border: 2px solid transparent;
+    }
+    
+    .bundle-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      border-color: var(--primary);
+    }
+    
+    .bundle-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--accent);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      z-index: 2;
+    }
+    
+    .bundle-img {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .bundle-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #f5f5f5;
+      transition: transform 0.5s ease;
+    }
+    
+    .bundle-card:hover .bundle-img img {
+      transform: scale(1.05);
+    }
+    
+    .bundle-content {
+      padding: 20px;
+      position: relative;
+    }
+    
+    .bundle-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: var(--dark);
+      font-weight: 600;
+    }
+    
+    .bundle-content p {
+      color: #666;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+    
+    .bundle-features {
+      margin-bottom: 20px;
+    }
+    
+    .bundle-features li {
+      list-style: none;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      color: #555;
+      position: relative;
+      padding-left: 25px;
+    }
+    
+    .bundle-features li:before {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: var(--success);
+    }
+    
+    .bundle-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    .price-tag {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    
+    .price-tag span {
+      font-size: 1rem;
+      color: #888;
+      text-decoration: line-through;
+      margin-left: 5px;
+    }
+    
+    .buy-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+    }
+    
+    .buy-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+    }
+    
+    .buy-btn i {
+      font-size: 0.9rem;
+    }
+    
+    /* ===== BUNDLE COMPARISON ===== */
+    .comparison-section {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-bottom: 60px;
+    }
+    
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .comparison-item {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      background: #f8f9fa;
+      transition: all 0.3s ease;
+    }
+    
+    .comparison-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .comparison-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .comparison-item h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+    
+    .comparison-item p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    /* ===== EARNING SECTION ===== */
+    .earning-section {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-bottom: 50px;
+    }
+    
+    .methods {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    
+    .method {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+    }
+    
+    .method-header {
+      padding: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+    }
+    
+    .method-header:hover {
+      background: #f8f9fa;
+    }
+    
+    .method-content {
+      display: none;
+      padding: 0 15px 15px;
+    }
+    
+    .method.active .method-content {
+      display: block;
+    }
+    
+    .platform {
+      padding: 12px 0;
+      border-top: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .platform:first-child {
+      border-top: none;
+    }
+    
+    .platform-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    
+    .platform-logo {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      margin-right: 10px;
+      object-fit: contain;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .platform h4 {
+      font-size: 0.95rem;
+      margin: 0;
+      color: #333;
+    }
+    
+    .platform p {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 10px;
+      margin-left: 40px;
+    }
+    
+    .platform .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-left: 40px;
+    }
+    
+    .platform button {
+      flex: 1;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    
+    .btn-join {
+      background: var(--success);
+      color: white;
+    }
+    
+    .btn-join:hover {
+      background: #00a884;
+      transform: translateY(-2px);
+    }
+    
+    .btn-buy {
+      background: var(--dark);
+      color: white;
+    }
+    
+    .btn-buy:hover {
+      background: #1e2729;
+      transform: translateY(-2px);
+    }
+    
+    .btn-install {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .btn-install:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    /* METHOD COLORS */
+    .method-1 .method-header { background: #e3f2fd; color: #0d3b66; }
+    .method-2 .method-header { background: #e8f5e9; color: #1b4332; }
+    .method-3 .method-header { background: #fff3cd; color: #5c4b00; }
+    .method-4 .method-header { background: #f8d7da; color: #721c24; }
+    .method-5 .method-header { background: #e2e3e5; color: #383d41; }
+    .method-6 .method-header { background: #d1ecf1; color: #0c5460; }
+    .method-7 .method-header { background: #f5e6ff; color: #4b0082; }
+    .method-8 .method-header { background: #ffe8e8; color: #8b0000; }
+    
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 992px) {
+      .comparison-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .methods {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .main-header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .main-header p {
+        font-size: 1rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      
+      .bundles-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .methods {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .main-header {
+        padding: 30px 15px;
+      }
+      
+      .main-header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .comparison-section {
+        padding: 20px;
+      }
+      
+      .reel-highlight {
+        min-width: 200px;
+        height: 300px;
+      }
+      
+      .reel-overlay h3 {
+        font-size: 1.2rem;
+      }
+      
+      .reel-overlay .price {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- MAIN HEADER -->
+    <header class="main-header">
+      <h1>Premium Reels Bundles</h1>
+      <p>High-quality, ready-to-use templates for Instagram, TikTok & YouTube Shorts with lifetime access</p>
+    </header>
+    
+    <!-- REELS SHOWCASE -->
+    <section class="reels-showcase">
+      <div class="section-title">
+        <h2>Featured Collections</h2>
+      </div>
+      
+      <div class="reels-marquee">
+        <div class="marquee-track">
+          <div class="reel-highlight" onclick="document.getElementById('bundles-section').scrollIntoView({behavior: 'smooth'})">
+            <img src="pic/1000+luxuryreels.png" alt="1000+ Luxury Reels">
+            <div class="reel-overlay">
+              <h3>Luxury Reels</h3>
+              <div class="price">₹99 ONLY</div>
+            </div>
+          </div>
+          <div class="reel-highlight" onclick="document.getElementById('bundles-section').scrollIntoView({behavior: 'smooth'})">
+            <img src="pic/aooinone.png" alt="All In One Bundle">
+            <div class="reel-overlay">
+              <h3>All In One</h3>
+              <div class="price">₹499 ONLY</div>
+            </div>
+          </div>
+          <div class="reel-highlight" onclick="document.getElementById('bundles-section').scrollIntoView({behavior: 'smooth'})">
+            <img src="pic/400+tooltips.png" alt="400+ Tool Tips">
+            <div class="reel-overlay">
+              <h3>Tool Tips</h3>
+              <div class="price">₹99 ONLY</div>
+            </div>
+          </div>
+          <div class="reel-highlight" onclick="document.getElementById('bundles-section').scrollIntoView({behavior: 'smooth'})">
+            <img src="pic/500+animatonreels.png" alt="500+ Animation Reels">
+            <div class="reel-overlay">
+              <h3>2D Animation</h3>
+              <div class="price">₹149 ONLY</div>
+            </div>
+          </div>
+          <!-- Duplicate for seamless looping -->
+          <div class="reel-highlight" onclick="document.getElementById('bundles-section').scrollIntoView({behavior: 'smooth'})">
+            <img src="pic/1000+luxuryreels.png" alt="1000+ Luxury Reels">
+            <div class="reel-overlay">
+              <h3>Luxury Reels</h3>
+              <div class="price">₹99 ONLY</div>
+            </div>
+          </div>
+          <div class="reel-highlight" onclick="document.getElementById('bundles-section').scrollIntoView({behavior: 'smooth'})">
+            <img src="pic/aooinone.png" alt="All In One Bundle">
+            <div class="reel-overlay">
+              <h3>All In One</h3>
+              <div class="price">₹499 ONLY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- REELS BUNDLES -->
+    <section class="bundles-section" id="bundles-section">
+      <div class="section-title">
+        <h2>Premium Bundles</h2>
+      </div>
+      
+      <div class="bundles-grid">
+        <!-- Bundle 1 -->
+        <div class="bundle-card">
+          <div class="bundle-img">
+            <img src="pic/1000+luxuryreels.png" alt="1000+ Luxury Reels">
+            <div class="bundle-badge">POPULAR</div>
+          </div>
+          <div class="bundle-content">
+            <h3>1000+ Luxury Reels</h3>
+            <p>Premium templates for high-end brands and luxury content</p>
+            <ul class="bundle-features">
+              <li>1000+ editable templates</li>
+              <li>No watermark</li>
+              <li>Lifetime access</li>
+              <li>Commercial license</li>
+            </ul>
+            <div class="bundle-price">
+              <div class="price-tag">₹99</div>
+              <button class="buy-btn" onclick="window.open('https://superprofile.bio/vp/1000--luxury-reels', '_blank')">
+                <i class="fas fa-shopping-cart"></i> Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bundle 2 -->
+        <div class="bundle-card">
+          <div class="bundle-img">
+            <img src="pic/aooinone.png" alt="All In One Bundle">
+            <div class="bundle-badge">BEST VALUE</div>
+          </div>
+          <div class="bundle-content">
+            <h3>All In One Bundle</h3>
+            <p>Complete collection with 8+ categories of reels</p>
+            <ul class="bundle-features">
+              <li>95% discount</li>
+              <li>8+ categories included</li>
+              <li>No need for multiple bundles</li>
+              <li>Limited time offer</li>
+            </ul>
+            <div class="bundle-price">
+              <div class="price-tag">₹499</div>
+              <button class="buy-btn" onclick="window.open('https://superprofile.bio/vp/all-in-one-bundle-pack-', '_blank')">
+                <i class="fas fa-shopping-cart"></i> Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bundle 3 -->
+        <div class="bundle-card">
+          <div class="bundle-img">
+            <img src="pic/400+tooltips.png" alt="400+ Tool Tips">
+            <div class="bundle-badge">SPECIAL</div>
+          </div>
+          <div class="bundle-content">
+            <h3>400+ Tool Tips</h3>
+            <p>Educational content templates for tutorials and how-tos</p>
+            <ul class="bundle-features">
+              <li>400+ professional templates</li>
+              <li>Easy to customize</li>
+              <li>Perfect for tutorials</li>
+              <li>Special offer price</li>
+            </ul>
+            <div class="bundle-price">
+              <div class="price-tag">₹99</div>
+              <button class="buy-btn" onclick="window.open('https://superprofile.bio/vp/400--tool-tips-reels', '_blank')">
+                <i class="fas fa-shopping-cart"></i> Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bundle 4 -->
+        <div class="bundle-card">
+          <div class="bundle-img">
+            <img src="pic/500+animatonreels.png" alt="500+ Animation Reels">
+            <div class="bundle-badge">NEW</div>
+          </div>
+          <div class="bundle-content">
+            <h3>500+ 2D Animation</h3>
+            <p>Fun and engaging animated templates for all niches</p>
+            <ul class="bundle-features">
+              <li>500+ animated templates</li>
+              <li>No watermark</li>
+              <li>Easy editing</li>
+              <li>Fun content styles</li>
+            </ul>
+            <div class="bundle-price">
+              <div class="price-tag">₹149</div>
+              <button class="buy-btn" onclick="window.open('https://superprofile.bio/vp/500--animation-reels', '_blank')">
+                <i class="fas fa-shopping-cart"></i> Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- BUNDLE COMPARISON -->
+    <section class="comparison-section">
+      <div class="section-title">
+        <h2>Why Choose Our Bundles</h2>
+      </div>
+      
+      <div class="comparison-grid">
+        <div class="comparison-item">
+          <div class="comparison-icon">
+            <i class="fas fa-water"></i>
+          </div>
+          <h4>No Watermark</h4>
+          <p>All templates come without any watermark for professional use</p>
+        </div>
+        
+        <div class="comparison-item">
+          <div class="comparison-icon">
+            <i class="fas fa-infinity"></i>
+          </div>
+          <h4>Lifetime Access</h4>
+          <p>One-time purchase with unlimited lifetime access</p>
+        </div>
+        
+        <div class="comparison-item">
+          <div class="comparison-icon">
+            <i class="fas fa-gem"></i>
+          </div>
+          <h4>Premium Quality</h4>
+          <p>High-quality designs that stand out from competitors</p>
+        </div>
+        
+        <div class="comparison-item">
+          <div class="comparison-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h4>Easy Editing</h4>
+          <p>Simple to customize with your content and branding</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- EARNING SECTION -->
+    <section class="earning-section">
+      <div class="section-title">
+        <h2>Earning Methods</h2>
+      </div>
+      
+      <div class="methods">
+        <!-- SHARE INTERNET -->
+        <div class="method method-1" onclick="toggleMethod(this)">
+          <div class="method-header">
+            <span><i class="fas fa-wifi"></i> Share Internet</span>
+            <span>+</span>
+          </div>
+          <div class="method-content">
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/heneygain.png" class="platform-logo" alt="Honeygain">
+                <h4>Honeygain</h4>
+              </div>
+              <p>Earn by sharing unused bandwidth</p>
+              <div class="btn-group">
+                <button class="btn-install" onclick="window.open('https://r.honeygain.me/LANGW726F5', '_blank')">
+                  <i class="fas fa-download"></i> Install
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/pawn.jpeg" class="platform-logo" alt="Pawns App">
+                <h4>Pawns App</h4>
+              </div>
+              <p>Get paid for idle internet/Play games</p>
+              <div class="btn-group">
+                <button class="btn-install" onclick="window.open('https://pawns.app/?r=3068377', '_blank')">
+                  <i class="fas fa-download"></i> Install
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="https://logo.clearbit.com/earnapp.com" class="platform-logo" alt="EarnApp">
+                <h4>EarnApp</h4>
+              </div>
+              <p>Earn money by sharing your internet connection</p>
+              <div class="btn-group">
+                <button class="btn-install" onclick="window.open('https://earnapp.com/i/NaX2PCwr', '_blank')">
+                  <i class="fas fa-download"></i> Install
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="https://logo.clearbit.com/grass.io" class="platform-logo" alt="Grass">
+                <h4>Grass</h4>
+              </div>
+              <p>Earn by sharing your unused internet</p>
+              <div class="btn-group">
+                <button class="btn-install" onclick="window.open('https://app.grass.io/register/?referralCode=0cnfMhwF2eQYXQU', '_blank')">
+                  <i class="fas fa-download"></i> Install
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLAY GAMES -->
+        <div class="method method-2" onclick="toggleMethod(this)">
+          <div class="method-header">
+            <span><i class="fas fa-gamepad"></i> Play Games</span>
+            <span>+</span>
+          </div>
+          <div class="method-content">
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/swagbuck.png" class="platform-logo" alt="Swagbucks">
+                <h4>Swagbucks</h4>
+              </div>
+              <p>Earn rewards playing mobile games</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://www.swagbucks.com/p/register?rb=152817477&rp=1', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/freecash.jpeg" class="platform-logo" alt="Freecash">
+                <h4>Freecash</h4>
+              </div>
+              <p>Get paid to try new games</p>
+              <div class="btn-group">
+                <button class="btn-install" onclick="window.open('https://freecash.com/r/17d01e2f1a', '_blank')">
+                  <i class="fas fa-download"></i> Install
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/Gamee.webp" class="platform-logo" alt="Gamee">
+                <h4>Gamee</h4>
+              </div>
+              <p>Get paid by playing games</p>
+              <div class="btn-group">
+                <button class="btn-install" onclick="window.open('https://prizes.gamee.com/get/k2u9zbqz', '_blank')">
+                  <i class="fas fa-download"></i> Install
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/cashmonkey.png" class="platform-logo" alt="Cash Monkey">
+                <h4>Cash Monkey</h4>
+              </div>
+              <p>Get paid by playing games/Daily log-in</p>
+              <div class="btn-group">
+                <button class="btn-install" onclick="window.open('https://cashmonkey.page.link/VLvn', '_blank')">
+                  <i class="fas fa-download"></i> Install
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TELEGRAM BOTS -->
+        <div class="method method-3" onclick="toggleMethod(this)">
+          <div class="method-header">
+            <span><i class="fab fa-telegram"></i> Telegram Bots</span>
+            <span>+</span>
+          </div>
+          <div class="method-content">
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/clickbeeBTC.jpg" class="platform-logo" alt="Click Bee BTC">
+                <h4>Click Bee BTC</h4>
+              </div>
+              <p>Earn crypto by clicking</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://t.me/ClickBeeBTCBot?start=7383079336', '_blank')">
+                  <i class="fas fa-robot"></i> Join Bot
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SMALL INVESTMENTS -->
+        <div class="method method-4" onclick="toggleMethod(this)">
+          <div class="method-header">
+            <span><i class="fas fa-coins"></i> Small Investments</span>
+            <span>+</span>
+          </div>
+          <div class="method-content">
+            <div class="platform">
+              <div class="platform-header">
+                <img src="https://logo.clearbit.com/richind.com" class="platform-logo" alt="Richind">
+                <h4>Richind</h4>
+              </div>
+              <p>Invest rs260, refer friends 2=rs400</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://richind.org?referrer_code=RINDPJKCAC', '_blank')">
+                  <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/jar.jpg" class="platform-logo" alt="MPL">
+                <h4>Jar</h4>
+              </div>
+              <p>Invest in Gold min rs10, hold gold, sell rs50</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://jar.onelink.me/6H9Q/vd5qkige', '_blank')">
+                  <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/stopover.jpg" class="platform-logo" alt="Zupee">
+                <h4>Stopover</h4>
+              </div>
+              <p>Invest min rs40, free design cloths, promote amnd earn commision.</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://stopover.store/invite/1830493', '_blank')">
+                  <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WATCH ADS -->
+        <div class="method method-5" onclick="toggleMethod(this)">
+          <div class="method-header">
+            <span><i class="fas fa-ad"></i> Watch Ads</span>
+            <span>+</span>
+          </div>
+          <div class="method-content">
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/cashbuck.png" class="platform-logo" alt="Cashbucks">
+                <h4>Cashbucks</h4>
+              </div>
+              <p>Earn points watching videos/play games/scrach/...</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://invite.cashbucks.app/?uid=WccSEQXbMXgSa0dc3CnxzVvPFFF3', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/timebuck.jpeg" class="platform-logo" alt="TaskBucks">
+                <h4>TimeBucks</h4>
+              </div>
+              <p>Complete tasks and watch ads</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('http://tbk.bz/1na4ujbn', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/stan.png" class="platform-logo" alt="Stan">
+                <h4>Stan</h4>
+              </div>
+              <p>Watch ads and earn rewards</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://getstan.page.link/e86oaNYwe8K3c9ka8', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/rooter.jpg" class="platform-logo" alt="Rooter">
+                <h4>Rooter</h4>
+              </div>
+              <p>Watch ads and earn money</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://rooter.app.link/B9d4eMzRwSb', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cashback -->
+        <div class="method method-8" onclick="toggleMethod(this)">
+          <div class="method-header">
+            <span><i class="fas fa-shopping-bag"></i> Earn Shopping</span>
+            <span>+</span>
+          </div>
+          <div class="method-content">
+            <div class="platform">
+              <div class="platform-header">
+                <img src="https://logo.clearbit.com/cashkaro.com" class="platform-logo" alt="Cashkaro">
+                <h4>Cashkaro</h4>
+              </div>
+              <p>Get cashback when shopping online</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://cashkaro.com?r=21517733&fname=Luffy', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="https://logo.clearbit.com/earnkaro.com" class="platform-logo" alt="Earnkaro">
+                <h4>Earnkaro</h4>
+              </div>
+              <p>Get paid when friends purchase from your link</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://earnkaro.com?r=3774102&fname=Luffy', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="https://logo.clearbit.com/paytm.com" class="platform-logo" alt="Paytm">
+                <h4>Paytm</h4>
+              </div>
+              <p>Get cashback on payments</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://p.paytm.me/xCTH/9j912cwy', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Surveys -->
+        <div class="method method-5" onclick="toggleMethod(this)">
+          <div class="method-header">
+            <span><i class="fas fa-poll"></i> Surveys</span>
+            <span>+</span>
+          </div>
+          <div class="method-content">
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/appkarma.png" class="platform-logo" alt="AppKarma">
+                <h4>AppKarma</h4>
+              </div>
+              <p>Complete surveys and earn</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://xkr.ma/PNxBX6IaFSb', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="pic/logo/AttaPoll.png" class="platform-logo" alt="AttaPoll">
+                <h4>AttaPoll</h4>
+              </div>
+              <p>Answer surveys for cash</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://attapoll.app/join/gzsds', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="https://logo.clearbit.com/ysense.com" class="platform-logo" alt="Ysense">
+                <h4>Ysense</h4>
+              </div>
+              <p>Complete surveys and earn money</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://www.ysense.com/?rb=210429217', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+            <div class="platform">
+              <div class="platform-header">
+                <img src="https://logo.clearbit.com/prizerebel.com" class="platform-logo" alt="PrizeRebel">
+                <h4>PrizeRebel</h4>
+              </div>
+              <p>Take surveys for rewards</p>
+              <div class="btn-group">
+                <button class="btn-join" onclick="window.open('https://www.prizerebel.com/index.php?r=15731689', '_blank')">
+                  <i class="fas fa-user-plus"></i> Join
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function toggleMethod(element) {
+      // Close all other open methods first
+      document.querySelectorAll('.method').forEach(method => {
+        if (method !== element) {
+          method.classList.remove('active');
+          method.querySelector('.method-header span:last-child').textContent = '+';
+        }
+      });
+      
+      // Toggle clicked method
+      element.classList.toggle('active');
+      const header = element.querySelector('.method-header span:last-child');
+      header.textContent = element.classList.contains('active') ? '-' : '+';
+    }
+  </script>
+</body>
+</html>
